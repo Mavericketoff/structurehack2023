@@ -82,7 +82,7 @@ class ContactCard extends StatelessWidget {
                   Row(
                     children: [
                       Image.asset(
-                        '/Users/mavericketoff/IdeaProjects/structurehack2023/lib/assets/logo3.png',
+                        'assets/images/logo3.png',
                         height: 50.0,
                         width: 50.0,
                         fit: BoxFit.cover,

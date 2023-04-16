@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../models/BusinessCard.dart';
 import '../utils/navigationUtils.dart';
+import 'creating_new_card.dart';
 
 
 class NewCard extends StatefulWidget {
@@ -76,7 +77,7 @@ class _NewCardState extends State<NewCard> {
                                       ),
                                     ),
                                         child: Image.asset(
-                                      '/Users/mavericketoff/IdeaProjects/structurehack2023/lib/assets/logo3.png',
+                                      'assets/images/logo3.png',
                                       width: 80.0,
                                       height: 80.0,
 
@@ -271,7 +272,7 @@ class _NewCardState extends State<NewCard> {
                                 child: FloatingActionButton.extended(
                                   backgroundColor: Colors.black45,
                                   onPressed: () {
-                                    Navigator.pushReplacementNamed(context, '/createCard');
+                                    Navigator.of(context).push(MaterialPageRoute(builder: (context) =>  CreatingNewCard(),),);
                                   },
                                   label: const Text(
                                     'Создать',
@@ -333,159 +334,3 @@ class _NewCardState extends State<NewCard> {
     );
   }
 }
-
-
-
-
-
-
-
-
-// void _showForm() {
-//   showDialog(
-//     context: context,
-//     builder: (BuildContext context) {
-//       return AlertDialog(
-//         shape: RoundedRectangleBorder(
-//           borderRadius: BorderRadius.circular(15.0),
-//         ),
-//         backgroundColor: Colors.blueGrey,
-//         title: const Text(
-//           'Моя визитка',
-//           style: TextStyle(
-//             color: Colors.white,
-//           ),
-//         ),
-//         content: SingleChildScrollView(
-//           child: Column(
-//             mainAxisSize: MainAxisSize.min,
-//             children: <Widget>[
-//               const Text("Общая информация", style: TextStyle(color: Colors.white, fontSize: 10),),
-//               const SizedBox(height: 10,),
-//               TextField(
-//                 decoration: const InputDecoration(
-//                   labelText: 'Имя',
-//                   labelStyle: TextStyle(color: Colors.white),
-//                   enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.grey)),
-//                   border: OutlineInputBorder(
-//                     borderSide: BorderSide(color: Colors.blue),
-//                   ),
-//                 ),
-//                 onChanged: (value) {
-//                   setState(() {
-//                     _name = value;
-//                   });
-//                 },
-//                 style: const TextStyle(color: Colors.white),
-//               ),
-//               const SizedBox(height: 10,),
-//               TextField(
-//                 decoration: const InputDecoration(
-//                   labelText: 'Должность',
-//                   labelStyle: TextStyle(color: Colors.white),
-//                   enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.grey)),
-//                   border: OutlineInputBorder(
-//                     borderSide: BorderSide(color: Colors.blue),
-//                   ),
-//                 ),
-//                 onChanged: (value) {
-//                   setState(() {
-//                     _position = value;
-//                   });
-//                 },
-//                 style: const TextStyle(color: Colors.white),
-//               ),
-//               const SizedBox(height: 10,),
-//               TextField(
-//                 decoration: const InputDecoration(
-//                   labelText: 'Компания',
-//                   labelStyle: TextStyle(color: Colors.white),
-//                   enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.grey)),
-//                   border: OutlineInputBorder(
-//                     borderSide: BorderSide(color: Colors.blue),
-//                   ),
-//                 ),
-//                 onChanged: (value) {
-//                   setState(() {
-//                     _company = value;
-//                   });
-//                 },
-//                 style: const TextStyle(color: Colors.white),
-//               ),
-//               const SizedBox(height: 20,),
-//               const Flexible(child: Text("Контактная информация", style: TextStyle(color: Colors.white, fontSize: 8),)),
-//               const SizedBox(height: 20,),
-//               TextField(
-//                 decoration: const InputDecoration(
-//                   labelText: 'Телефон',
-//                   labelStyle: TextStyle(color: Colors.white),
-//                   enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.grey)),
-//                   border: OutlineInputBorder(
-//                     borderSide: BorderSide(color: Colors.blue),
-//                   ),
-//                 ),
-//                 onChanged: (value) {
-//                   setState(() {
-//                     _phone = value;
-//                   });
-//                 },
-//                 style: const TextStyle(color: Colors.white),
-//               ),
-//               const SizedBox(height: 10),
-//               TextField(
-//                 decoration: const InputDecoration(
-//                   labelText: 'Телеграмм',
-//                   labelStyle: TextStyle(color: Colors.white),
-//                   enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.grey)),
-//                   border: OutlineInputBorder(
-//                     borderSide: BorderSide(color: Colors.blue),
-//                   ),
-//                 ),
-//                 onChanged: (value) {
-//                   setState(() {
-//                     _phone = value;
-//                   });
-//                 },
-//                 style: const TextStyle(color: Colors.white),
-//               ),
-//               const SizedBox(height: 10,),
-//               TextField(
-//                 decoration: const InputDecoration(
-//                   labelText: 'Email',
-//                   labelStyle: TextStyle(color: Colors.white),
-//                   //hintStyle: TextStyle(color: Colors.grey),
-//                   enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.grey)),
-//                   border: OutlineInputBorder(
-//                     borderSide: BorderSide(color: Colors.blue),
-//                   ),
-//                 ),
-//                 onChanged: (value) {
-//                   setState(() {
-//                     _email = value;
-//                   });
-//                 },
-//                 style: const TextStyle(color: Colors.white),
-//               ),
-//             ],
-//           ),
-//         ),
-//         actions: <Widget>[
-//           FloatingActionButton.extended(
-//             backgroundColor: Colors.lightGreen,
-//             label: const Text("Отмена", style: TextStyle(color: Colors.black),),
-//             onPressed: () {
-//               Navigator.of(context).pop();
-//             },
-//           ),
-//           FloatingActionButton.extended(
-//             backgroundColor: Colors.lightGreen,
-//             label: const Text("Сохранить", style: TextStyle(color: Colors.black),),
-//             onPressed: () {
-//               Navigator.of(context).pop();
-//             },
-//           ),
-//         ],
-//       );
-//     },
-//   );
-// }

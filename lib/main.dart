@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:structurehack2023/screens/about_app_screen.dart';
 import 'package:structurehack2023/screens/cardList_page.dart';
 import 'package:structurehack2023/screens/creating_new_card.dart';
-import 'package:structurehack2023/screens/home_page.dart';
 import 'package:structurehack2023/screens/login_page.dart';
 import 'package:structurehack2023/screens/new_card.dart';
 import 'package:structurehack2023/screens/register_page.dart';
@@ -24,7 +23,7 @@ class MyApp extends StatelessWidget {
         pageTransitionsTheme: CustomPageTransitionsTheme(),
       ),
       debugShowCheckedModeBanner: false,
-      initialRoute: '/login',
+      initialRoute: '/register',
       routes: {
         '/login': (context) =>const LoginPage(),
         '/register': (context) => const RegisterPage(),

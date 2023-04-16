@@ -3,9 +3,6 @@ import 'package:structurehack2023/screens/about_app_screen.dart';
 import 'package:structurehack2023/screens/new_card.dart';
 
 import '../screens/cardList_page.dart';
-import '../screens/home_page.dart';
-
-
 
 Route getPageByIndex(int index) {
   switch (index) {

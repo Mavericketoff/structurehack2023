@@ -4,9 +4,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:structurehack2023/screens/nfc_reader_page.dart';
 import 'package:structurehack2023/screens/qrView_screen.dart';
 
-
-
-import '../utils/app_colors.dart';
 import '../utils/navigationUtils.dart';
 
 class CardListPage extends StatefulWidget {
@@ -92,7 +89,7 @@ class _CardListPage extends State<CardListPage> with SingleTickerProviderStateMi
                                   ),
                                 ),
                                 child: Image.asset(
-                                  '/Users/mavericketoff/IdeaProjects/structurehack2023/lib/assets/logo3.png',
+                                  'assets/images/logo3.png',
                                   width: 80.0,
                                   height: 80.0,
 
@@ -353,7 +350,7 @@ class _CardListPage extends State<CardListPage> with SingleTickerProviderStateMi
                                   ),
                                 ),
                                 child: Image.asset(
-                                  '/Users/mavericketoff/IdeaProjects/structurehack2023/lib/assets/logo3.png',
+                                  'assets/images/logo3.png',
                                   width: 80.0,
                                   height: 80.0,
 

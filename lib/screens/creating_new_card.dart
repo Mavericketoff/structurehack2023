@@ -12,6 +12,7 @@ class _CreatingNewCard extends State<CreatingNewCard>{
     return Scaffold(
       appBar: AppBar(
         backgroundColor:const Color.fromARGB(255, 96, 238, 83),
+        backwardsCompatibility: true,
         title: const Text("Новая визитка", style: TextStyle(color: Colors.black),),
         iconTheme: const IconThemeData(color: Colors.black),
       ),
@@ -57,7 +58,7 @@ class _CreatingNewCard extends State<CreatingNewCard>{
                           ),
                         ),
                         child: Image.asset(
-                          '/Users/mavericketoff/IdeaProjects/structurehack2023/lib/assets/logo3.png',
+                          'assets/images/logo3.png',
                           width: 90.0,
                           height: 90.0,
                           color: Colors.black,
