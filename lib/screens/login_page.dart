@@ -6,8 +6,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart';
 
 
-import '../utils/app_colors.dart';
-
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
 

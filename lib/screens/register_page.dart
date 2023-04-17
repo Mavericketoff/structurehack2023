@@ -1,14 +1,11 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:http/http.dart' as http;
 import 'package:http/http.dart';
 
 
-import '../utils/app_colors.dart';
 
 class RegisterPage extends StatefulWidget{
   const RegisterPage({super.key});
